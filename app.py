@@ -1,30 +1,10 @@
 import streamlit as st
 import pickle
 from datetime import datetime
-# startTime = datetime.now()
-# import znanych nam bibliotek
-
-# objawy	wiek	choroby	wzrost	zdrowie
-# 1		0	170	0
-# 1	65	0		0
-# 1	55	0	182	0
-# 1	44	0	187	0
-# 1	77	0	165	0
-# 1	64	0	164	0
-# 2	54	1	178	0
-# 1		1	190	0
-# 1	76	1	200	0
-# 2	54	0	198	0
-# 3	56	0	187	0
-# 1	68	0	167	0
-# 3		1	168	0
-# 2	55	1	189	0
 
 filename = "model.sv"
 model = pickle.load(open(filename,'rb'))
-# otwieramy wcześniej wytrenowany model
 
-# o ile wcześniej kodowaliśmy nasze zmienne, to teraz wprowadzamy etykiety z ich nazewnictwem
 def main():
 	st.set_page_config(page_title="Czy wyzdrowiejesz po tygodniu?")
 	overview = st.container()
